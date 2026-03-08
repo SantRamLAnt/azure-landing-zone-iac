@@ -46,3 +46,12 @@ GitHub Commit
 ## Deployment Evidence
 
 Example outputs from Terraform:
+
+
+Example Azure resources created:
+
+- Resource Group
+- Log Analytics Workspace
+- Azure Key Vault
+
+Screenshots of Harness pipeline runs and Azure resources will be added as the project evolves.
