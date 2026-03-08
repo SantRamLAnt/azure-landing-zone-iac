@@ -2,40 +2,41 @@
 
 Enterprise-ready Azure landing zone built with Terraform and deployed using Harness pipelines.
 
+---
+
+## Overview
+
+This repository demonstrates a foundational Azure landing zone design using Infrastructure as Code. It is structured to reflect how a cloud platform team would provision, secure, and standardize Azure environments.
+
+---
+
 ## Architecture
 
-Hub-Spoke networking model with centralized logging, security, and RBAC controls.
+This solution is designed around a **hub-and-spoke model** with centralized governance, logging, and reusable infrastructure patterns.
 
-Components deployed:
+### Planned Components
 
-• Resource Groups
-• Hub Virtual Network
-• Spoke Networks
-• Azure Key Vault
-• Log Analytics Workspace
-• Storage Accounts
-• RBAC Role Assignments
+- Resource Groups
+- Hub Virtual Network
+- Spoke Networks
+- Azure Key Vault
+- Log Analytics Workspace
+- Storage Accounts
+- RBAC Role Assignments
+
+---
 
 ## Deployment Pipeline
 
-Infrastructure is deployed via Harness CI/CD pipelines.
+Infrastructure is deployed through **Harness CI/CD pipelines**.
 
-Workflow:
+### Workflow
 
+```text
 GitHub Commit
 → Harness Pipeline
+→ Terraform Init
 → Terraform Plan
 → Security Scan
 → Terraform Apply
 → Azure Deployment
-
-## Technologies
-
-Terraform  
-Harness CI/CD  
-Azure RBAC  
-Azure Networking  
-Azure Key Vault  
-Azure Monitor
-
-## Example Deployment
