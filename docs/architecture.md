@@ -24,3 +24,16 @@ Secrets should be handled securely through Azure Key Vault and Harness secrets.
 
 ### Observability
 Logging and monitoring are planned through Azure Monitor and Log Analytics.
+
+## Infrastructure Modules
+
+The infrastructure is organized into reusable Terraform modules.
+
+Current modules include:
+
+- **keyvault** – secure storage for secrets and certificates
+- **vnet** – virtual network foundation for hub-spoke architecture
+- **log-analytics** – centralized logging and monitoring
+- **storage** – general purpose storage accounts
+
+This modular approach allows the platform team to standardize deployments across multiple environments.
