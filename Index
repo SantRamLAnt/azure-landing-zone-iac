@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Azure Landing Zone Project</title>
+</head>
+<body>
+
+<h1>Azure Landing Zone Infrastructure as Code</h1>
+
+<p>This project demonstrates an Azure enterprise landing zone implemented with Terraform.</p>
+
+</body>
+</html>
