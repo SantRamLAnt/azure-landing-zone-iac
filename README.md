@@ -40,3 +40,9 @@ GitHub Commit
 → Security Scan
 → Terraform Apply
 → Azure Deployment
+
+---
+
+## Deployment Evidence
+
+Example outputs from Terraform:
