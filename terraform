@@ -1,0 +1,5 @@
+── modules
+│   │   ├── vnet
+│   │   ├── log-analytics
+│   │   ├── keyvault
+│   │   └── storage
