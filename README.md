@@ -1,22 +1,41 @@
-# azure-landing-zone-iac
-Title: Azure Landing Zone IaC (Hub-Spoke + Governance)
+# Azure Landing Zone IaC
 
-What it does: Provisions an Azure landing zone baseline using Terraform: management-ready networking, security primitives, tagging conventions, and monitoring hooks.
+Enterprise-ready Azure landing zone built with Terraform and deployed using Harness pipelines.
 
-Key Features:
+## Architecture
 
-Hub-and-spoke VNet design
+Hub-Spoke networking model with centralized logging, security, and RBAC controls.
 
-RBAC-ready structure
+Components deployed:
 
-Key Vault for secrets
+• Resource Groups
+• Hub Virtual Network
+• Spoke Networks
+• Azure Key Vault
+• Log Analytics Workspace
+• Storage Accounts
+• RBAC Role Assignments
 
-Central Log Analytics workspace
+## Deployment Pipeline
 
-How to deploy:
+Infrastructure is deployed via Harness CI/CD pipelines.
 
-“Triggered via Harness pipeline landing-zone-provision”
+Workflow:
 
-Inputs: subscription_id, region, naming prefix
+GitHub Commit
+→ Harness Pipeline
+→ Terraform Plan
+→ Security Scan
+→ Terraform Apply
+→ Azure Deployment
 
-Evidence: link to screenshots of Harness run + Azure resources
+## Technologies
+
+Terraform  
+Harness CI/CD  
+Azure RBAC  
+Azure Networking  
+Azure Key Vault  
+Azure Monitor
+
+## Example Deployment
