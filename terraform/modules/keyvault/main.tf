@@ -19,3 +19,12 @@ resource "azurerm_key_vault" "kv" {
     ]
   }
 }
+
+module "keyvault" {
+  source = "./modules/keyvault"
+
+  location            = var.region
+  resource_group_name = azurerm_resource_group.landing_zone_rg.name
+  tenant_id           = var.tenant_id
+  object_id           = var.object_id
+}
