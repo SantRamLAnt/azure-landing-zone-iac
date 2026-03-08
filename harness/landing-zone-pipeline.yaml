@@ -1,0 +1,29 @@
+pipeline:
+  name: landing_zone_deployment
+  identifier: landing_zone_deployment
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Terraform_Plan
+        identifier: Terraform_Plan
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Terraform_Init
+                  identifier: Terraform_Init
+                  spec:
+                    shell: Sh
+                    command: terraform init
+              - step:
+                  type: Run
+                  name: Terraform_Plan
+                  identifier: Terraform_Plan_Step
+                  spec:
+                    shell: Sh
+                    command: terraform plan
