@@ -3,10 +3,18 @@ resource "azurerm_resource_group" "landing_zone_rg" {
   location = var.region
 }
 
-resource "azurerm_log_analytics_workspace" "central_logs" {
-  name                = "law-landing-zone-dev"
+module "log_analytics" {
+  source = "./modules/log-analytics"
+
   location            = var.region
   resource_group_name = azurerm_resource_group.landing_zone_rg.name
-  sku                 = "PerGB2018"
-  retention_in_days   = 30
+}
+
+module "keyvault" {
+  source = "./modules/keyvault"
+
+  location            = var.region
+  resource_group_name = azurerm_resource_group.landing_zone_rg.name
+  tenant_id           = var.tenant_id
+  object_id           = var.object_id
 }
