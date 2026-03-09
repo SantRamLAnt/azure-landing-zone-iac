@@ -1,1 +1,7 @@
-# Placeholder for future Log Analytics module
+resource "azurerm_log_analytics_workspace" "law" {
+  name                = "law-landing-zone-demo"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
+}
