@@ -18,3 +18,4 @@ module "keyvault" {
   tenant_id           = var.tenant_id
   object_id           = var.object_id
 }
+ 
