@@ -55,3 +55,4 @@ Example Azure resources created:
 - Azure Key Vault
 
 Screenshots of Harness pipeline runs and Azure resources will be added as the project evolves.
+ 
