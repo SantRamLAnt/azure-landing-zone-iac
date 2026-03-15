@@ -1,7 +1,19 @@
-variable "location" {
-  type = string
+variable "region" {
+  description = "Azure region for deployment"
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "Resource group name"
+  type        = string
+}
+
+variable "tenant_id" {
+  description = "Azure tenant ID"
+  type        = string
+}
+
+variable "object_id" {
+  description = "Azure object ID for Key Vault access"
+  type        = string
 }
