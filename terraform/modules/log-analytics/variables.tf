@@ -17,3 +17,4 @@ variable "object_id" {
   description = "Azure object ID for Key Vault access"
   type        = string
 }
+ 
